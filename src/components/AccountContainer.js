@@ -58,6 +58,8 @@ function AccountContainer() {
   }
   console.log(transactions)
   console.log(searchTerm)
+
+
   const transactionShow = transactions.filter((transact) => 
   transact.description.toString().toLowerCase().includes(searchTerm.toString().toLowerCase())
   );
@@ -71,7 +73,7 @@ function AccountContainer() {
   },[])
   return (
     <div>
-      <Search searchTerm={searchTerm}
+      <Search setSearchTerm={setSearchTerm}
       onChangeSearch={setSearchTerm}
       />
       <AddTransactionForm 

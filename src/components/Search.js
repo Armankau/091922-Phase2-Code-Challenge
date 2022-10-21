@@ -1,7 +1,7 @@
 import React from "react";
 import AccountContainer from "./AccountContainer";
 
-function Search({searchTerm, onChangeSearch}) {
+function Search({setSearchTerm, onChangeSearch}) {
   function handleChange(event){
     onChangeSearch(event.target.value)
   }
@@ -11,7 +11,7 @@ function Search({searchTerm, onChangeSearch}) {
       <input
         type="text"
         placeholder="Search your Recent Transactions"
-        value={searchTerm}
+        value={setSearchTerm}
         onChange={handleChange}
       />
       <i className="circular search link icon"></i>
